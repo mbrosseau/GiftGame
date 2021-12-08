@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout >
+        <lightning-layout-item padding="around-small">
+    <lightning-card title={title} icon-name="custom:custom3">
+
+      
+            <lightning-layout vertical-align="center">
+                <lightning-layout-item padding="around-small">
+                    <template if:true={opened}>
+                        <img src={gift.Image_URL__c}   onclick={showHandler}/><br/>
+                        <div class="productname">{gift.Name} </div>
+                     </template>
+                     <template if:false={opened}>
+                        <img src={gift.Wrapped_URL__c}  class="present" onclick={showHandler}/><br/>
+                     </template>
+                     <template if:true={showRecipientInput}>
+                        <lightning-record-edit-form object-api-name="Gift__c" record-id={gift.Id} onsuccess={handleSucess}>
+                            <lightning-input-field field-name="Recipient__c"></lightning-input-field>
+                        </lightning-record-edit-form>
+                        <lightning-layout >
+                            <lightning-layout-item padding="around-small">
+                        <lightning-button type="submit" variant="brand" label="Assign Gift" onclick={handleAssignGift}>> </lightning-button>
+                       </lightning-layout-item>
+                       <lightning-layout-item padding="around-small">
+                        <lightning-button type="submit" variant="brand" label="Cancel" onclick={handleCancel}>> </lightning-button>
+                    </lightning-layout-item>    
+                    </lightning-layout>
+                         </template>
+                    </lightning-layout-item>
+                   
+           
+            </lightning-layout>
+      
+</lightning-card>
+</lightning-layout-item>
+</lightning-layout>
+</template>

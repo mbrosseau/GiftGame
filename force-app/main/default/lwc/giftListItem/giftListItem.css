@@ -1,0 +1,27 @@
+img {
+    max-height: 300px;
+    max-width: 300px;
+    width: auto;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.productname {
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+
+}
+
+.recipient {
+    font-size: 15px;
+    text-align: center;
+
+    
+}
+
+.present {
+    width: 300px;
+    height: auto;
+}

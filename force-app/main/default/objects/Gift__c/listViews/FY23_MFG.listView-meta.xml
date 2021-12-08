@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FY23_MFG</fullName>
+    <columns>NAME</columns>
+    <columns>From__c</columns>
+    <columns>Recipient__c</columns>
+    <columns>Opened__c</columns>
+    <columns>Image_URL__c</columns>
+    <columns>Wrapped_URL__c</columns>
+    <columns>Gift_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Gift_Exchange__c</field>
+        <operation>equals</operation>
+        <value>FY22 MFG Solutions WInter</value>
+    </filters>
+    <label>FY23 MFG</label>
+</ListView>

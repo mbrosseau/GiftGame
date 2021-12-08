@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#DE2828</headerColor>
+        <logo>CandyCanes</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Holiday App</label>
+    <navType>Standard</navType>
+    <tabs>Holiday_Gifts</tabs>
+    <tabs>Gift_Exchange__c</tabs>
+    <tabs>Gift__c</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Holiday_App_UtilityBar</utilityBar>
+</CustomApplication>
