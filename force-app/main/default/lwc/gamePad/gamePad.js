@@ -8,6 +8,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class GamePad extends LightningElement {
 
+    @api recordId;
     @wire(getAllGifts) gifts;
 
     showHandler(event) {

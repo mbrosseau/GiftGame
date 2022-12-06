@@ -11,6 +11,14 @@ public with sharing class GiftController {
         ];
     }
 
+    @AuraEnabled(cacheable=true)
+    public static List<Gift__c> getGiftsByExchangeId(String id) {
+        return [
+            SELECT Name, Id, From__c, Image_URL__c, Recipient__c, Wrapped_URL__c, Opened__c
+            FROM Gift__c where Gift_Exchange__c =: id
+        ];
+    }
+
     @AuraEnabled
     public static void openGift(String recordId) {
         Gift__c openedGift = new Gift__c();
