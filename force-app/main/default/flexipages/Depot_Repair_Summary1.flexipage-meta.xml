@@ -3,7 +3,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>gamePad</componentName>
+                <componentName>gameSelector</componentName>
+                <identifier>c_gameSelector</identifier>
             </componentInstance>
         </itemInstances>
         <name>region1</name>

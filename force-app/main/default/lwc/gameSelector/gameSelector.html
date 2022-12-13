@@ -1,0 +1,31 @@
+<template>
+    <lightning-card  title="">
+        <!--<lightning-layout vertical-align="stretch" multiple-rows="true" padding="around-medium">
+           <lightning-layout-item padding="around-small" size="3">
+              <img height="300px" width="100%" src="/resource/HolidayTitle"/>
+           </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="3">
+           <div class="SETitle">SE Holiday Gift Giving Event</div>
+        </lightning-layout-item>
+        </lightning-layout>-->
+        <lightning-layout vertical-align="stretch" multiple-rows="true" >
+
+         <lightning-layout-item flexibility="auto" padding="horizontal-medium" size="3">
+         <img height="300px" src="/resource/HolidayTitle"/>
+             
+            
+                <lightning-combobox name="types" label="Select Game" value={value} options={TypeOptions} onchange={handleTypeChange}> </lightning-combobox> 
+
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" size="9">
+               </lightning-layout-item>
+        
+        </lightning-layout>
+      </lightning-card>
+     <template if:true={gifts}>
+     
+             <c-game-pad key={gameId} gifts={gifts}></c-game-pad> 
+     </template>
+  
+
+</template>

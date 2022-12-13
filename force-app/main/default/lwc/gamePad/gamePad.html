@@ -1,19 +1,11 @@
 <template>
    <div class="c-container">
-      <lightning-card  title="">
-      <lightning-layout vertical-align="stretch" multiple-rows="true" padding="around-medium">
-         <lightning-layout-item padding="around-small" size="3">
-            <img height="300px" src="https://mbrosseau-20200921-demo.my.salesforce.com/resource/Santa"/>
-         </lightning-layout-item>
-      <lightning-layout-item padding="around-small" size="3">
-         <div class="SETitle">SE Holiday Gift Giving Event</div>
-      </lightning-layout-item>
-      </lightning-layout>
-   </lightning-card>
-      <lightning-layout vertical-align="stretch" multiple-rows="true" padding="around-medium">
+       <lightning-layout vertical-align="stretch" multiple-rows="true" padding="around-medium">
 
-         <template if:true={gifts.data}>
-           <template for:each={gifts.data} for:item="gift">
+
+       <template if:true={gifts}>
+       
+           <template for:each={gifts} for:item="gift">
             <div key={gift.Id}>
                <lightning-layout-item padding="around-small" size="3">
                <c-gift-List-Item key={gift.Id} gift={gift}></c-gift-List-Item>
@@ -23,11 +15,17 @@
          </div>
            </template>
          </template>
+
+       
+         <template if:true={error}>
+          Error
+        </template>  
       </lightning-layout>
       </div>
+       <!--
          <template if:true={gifts.error}>
             {gifts.error}
         </template>
-      
+      -->
  
 </template>
